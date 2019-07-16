@@ -1,0 +1,17 @@
+@using SimpleMvc.Models
+@{
+    var per = ViewData["Person"] as Person;
+}
+
+<table>  
+<tr>  
+   <th>Id</th>  
+   <th>FirstName</th>  
+   <th>LastName</th>  
+</tr>  
+   <tr>  
+      <td>@per.Id</td>  
+      <td>@per.FirstName</td>  
+      <td>@per.LastName</td>  
+   </tr>  
+</table> 

@@ -1,0 +1,17 @@
+@Model SimpleMvc.Models.Person 
+@{
+    ViewData["Title"] = "Welcome"; 
+}
+
+<table>  
+<tr>  
+   <th>Id</th>  
+   <th>FirstName</th>  
+   <th>LastName</th>  
+</tr>  
+   <tr>  
+      <td>@Model.Id</td>  
+      <td>@Model.FirstName</td>  
+      <td>@Model.LastName</td>  
+   </tr>  
+</table> 
