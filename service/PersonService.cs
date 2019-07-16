@@ -14,10 +14,12 @@ namespace SimpleMvc.Service
 {
     public class PersonService : IPersonService
     {
+        // "Persons" variable is created with 50 objects in the beginning 
         private List<Person> Persons { get; set; }
 
         public PersonService()
         {
+            // creating 50 objects of Persons and adding all these to "Persons" variable 
             var i = 0;
             Persons = A.ListOf<Person>(50);
             Persons.ForEach(person =>

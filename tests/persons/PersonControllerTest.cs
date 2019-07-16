@@ -19,6 +19,7 @@ namespace SimpleMvc.tests.persons
 
         public PersonControllerTest() 
         {
+            // For PersonService, adding 2 more records 
             Person per1 = new Person(); 
             per1.FirstName = "Tom"; 
             per1.LastName = "Cat"; 
@@ -33,9 +34,11 @@ namespace SimpleMvc.tests.persons
             service.Add(per1); 
             service.Add(per2); 
 
+            // now PersonController is created with service object 
             controller = new PersonController(service);           
         }
 
+        // verify the records from the PersonController, specifically record 51 and 52 
         [Theory]
         [InlineData(51, "Tom", "Cat", 6)] 
         [InlineData(52, "Jerry", "Cat", 8)] 

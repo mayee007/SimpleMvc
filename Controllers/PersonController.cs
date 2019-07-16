@@ -11,6 +11,7 @@ namespace SimpleMvc.Controllers
         // GET: /Person/
         IPersonService ser; 
 
+        // This controller needs PersonService to create the object 
         public PersonController(IPersonService service) 
         {
             ser = service; 
@@ -24,13 +25,16 @@ namespace SimpleMvc.Controllers
         }
 
         // 
-        // GET: /Person/Welcome/ 
+        // GET: /Person/PersonByID/<id>/ 
 
         public IActionResult PersonByID(int? id)
         {
             return View(ser.Get((int)id)); 
         }
 
+        // 
+        // GET: /Person/PersonByID/<id>/
+        
         public IActionResult PersonByIDOtherWay(int? id)
         {            
             ViewData["Person"] = ser.Get((int)id);
