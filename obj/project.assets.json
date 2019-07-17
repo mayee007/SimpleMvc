@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.2": {
+      "AutoMockHelper/1.1.0.33": {
+        "type": "package",
+        "dependencies": {
+          "Moq.AutoMock": "1.2.0.111",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.4/AutoMockHelper.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.4/AutoMockHelper.Core.dll": {}
+        }
+      },
       "Castle.Core/4.4.0": {
         "type": "package",
         "dependencies": {
@@ -3240,6 +3253,19 @@
           "lib/netstandard2.0/Moq.dll": {}
         }
       },
+      "Moq.AutoMock/1.2.0.111": {
+        "type": "package",
+        "dependencies": {
+          "Moq": "4.8.2",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.4/Moq.AutoMock.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.4/Moq.AutoMock.dll": {}
+        }
+      },
       "NETStandard.Library/2.0.3": {
         "type": "package",
         "dependencies": {
@@ -5583,6 +5609,18 @@
     }
   },
   "libraries": {
+    "AutoMockHelper/1.1.0.33": {
+      "sha512": "zgt9j3wqT89gjFoOSHSwUNSw9VQYZBrOVfsnauPTJRd1RPZu21m6r4+6oF3NubX+9uObj+P3Ht8fS+m6UgpxlA==",
+      "type": "package",
+      "path": "automockhelper/1.1.0.33",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "automockhelper.1.1.0.33.nupkg.sha512",
+        "automockhelper.nuspec",
+        "lib/netstandard1.4/AutoMockHelper.Core.dll"
+      ]
+    },
     "Castle.Core/4.4.0": {
       "sha512": "b5rRL5zeaau1y/5hIbI+6mGw3cwun16YjkHZnV9RRT5UyUIFsgLmNXJ0YnIN9p8Hw7K7AbG1q1UclQVU3DinAQ==",
       "type": "package",
@@ -9231,6 +9269,18 @@
         "lib/netstandard2.0/Moq.xml",
         "moq.4.12.0.nupkg.sha512",
         "moq.nuspec"
+      ]
+    },
+    "Moq.AutoMock/1.2.0.111": {
+      "sha512": "sTYHaljVyDN7PqABdTLkVg2eqkK7bIV1YSUh5icaC9sho3nZhcPiBprd+QCZk0XHl57efRj13aI3oLdlts1vhg==",
+      "type": "package",
+      "path": "moq.automock/1.2.0.111",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard1.4/Moq.AutoMock.dll",
+        "moq.automock.1.2.0.111.nupkg.sha512",
+        "moq.automock.nuspec"
       ]
     },
     "NETStandard.Library/2.0.3": {
@@ -15194,6 +15244,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
+      "AutoMockHelper >= 1.1.0.33",
       "EntityFramework >= 6.2.0",
       "FluentAssertions >= 5.7.0",
       "GenFu >= 1.5.6",
@@ -15250,6 +15301,10 @@
     "frameworks": {
       "netcoreapp2.2": {
         "dependencies": {
+          "AutoMockHelper": {
+            "target": "Package",
+            "version": "[1.1.0.33, )"
+          },
           "EntityFramework": {
             "target": "Package",
             "version": "[6.2.0, )"

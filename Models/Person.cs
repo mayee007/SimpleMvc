@@ -8,6 +8,8 @@ namespace SimpleMvc.Models
 {
     public class Person
     {
+        public Person() 
+        {}
         public int Id { get; set; }
         [Required]
         public string FirstName { get; set; }
