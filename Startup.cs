@@ -10,6 +10,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using SimpleMvc.Service; 
+using SimpleMvc.Models; 
+using Microsoft.EntityFrameworkCore;
 
 namespace SimpleMvc
 {
@@ -32,8 +34,11 @@ namespace SimpleMvc
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-
+          
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            services.AddDbContext<PersonDbContext>(options =>
+                options.UseSqlite(Configuration.GetConnectionString("PersonDbContext")));
 
             // added PersonService manually 
             services.AddScoped<IPersonService, PersonService>();
